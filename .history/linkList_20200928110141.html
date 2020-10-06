@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var deleteNode = function (node) {
+            const head = [4, 5, 1, 9];
+            let xxx = {
+
+            }
+            xxx.next = { val: 4 };
+            xxx.next.next = { val: 5 };
+            xxx.next.next.next = { val: 1 };
+            xxx.next.next.next.next = { val: 9 };
+            let p = xxx;
+            while (p) {
+                p = p.next;
+
+            }
+            console.log(xxx);
+        };
+
+        deleteNode(1);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const a = {
+            val: 'a',
+        }
+        const b = {
+            val: 'b',
+        }
+        const c = {
+            val: 'c',
+        }
+        const d = {
+            val: 'd'
+        }
+        const e = {
+            val: 'e',
+        }
+        a.next = b;
+        b.next = c;
+        c.next = d;
+
+        c.next = e;
+        e.next = d;
+
+
+
+    </script>
+</body>
+
+</html>

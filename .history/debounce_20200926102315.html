@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button class="btn">点击</button>
+
+<body>
+    <script>
+        function debounce(fn, delay) {
+            let timerId = null;
+            return function () {
+                const that = this;
+                if (timerId) {
+                    window.clearTimeout(timerId);
+                }
+                timerId = setTimeout(() => {
+                    fn.apply(that, arguments);
+                    timerId = null;
+                }, delay)
+            }
+        }
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('click', debounce(() => { console.log("123") }, 1000));
+
+    </script>
+</body>
+
+</html>

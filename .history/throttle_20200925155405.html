@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button onclick="xxx()">节流按钮</button>
+
+<body>
+
+    <script>
+        function throttle(callback, delay) {
+            let pre = 0;
+            return function (event) {
+                const current = Date.now();
+                if (current - pre > delay) {
+                    callback.call(this, event);
+                    pre = current;
+                }
+            }
+        }
+        function xxx() {
+            console.log("点击了");
+        }
+    </script>
+</body>
+
+</html>
