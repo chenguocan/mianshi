@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function deepCopy(target, source) {
+            for (var key in source) {
+                var item = source[key];
+                if (item instanceof Array) {
+                    target[key] = [];
+                    deepCopy(target[key], item);
+                }
+                if (item instanceof Object) {
+                    target[key] = {};
+                    deepCopy(target[key], item);
+                } else {
+                    target[key] = item;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

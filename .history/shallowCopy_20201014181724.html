@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function shallowCopy(target, source) {
+            if (!source || typeof source !== 'object') {
+                return;
+            }
+            if (!target || typeof target !== 'object') {
+                return;
+            }
+            for (var key in source) {
+                if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                }
+            }
+        }
+        let obj1 = {
+            name: 'chen',
+            age: '18',
+            children: {
+                name: 'hahaha',
+            }
+        }
+        const obj2 = {},
+            obj2 = obj1;
+        console.log(obj2);
+    </script>
+</body>
+
+</html>

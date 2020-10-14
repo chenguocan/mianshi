@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Array.prototype.mergeSort = function () {
+            console.log(this);
+
+            const rec = (arr) => {
+                if (arr.length === 1) {
+                    return;
+                }
+                const mid = Math.floor(arr.length / 2);
+                const left = arr.slice(0, mid);
+                const right = arr.slice(mid, arr.length);
+                console.log(left);
+                console.log(right);
+            }
+        }
+        const arr = [4, 5, 8, 9, 10, 7, 8, 2, 3];
+        arr.mergeSort();
+    </script>
+</body>
+
+</html>
